@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.ui.utils.SeleniumUtils;
+
 public class LoginPage {
 	private WebDriver driver;
 	
@@ -28,24 +30,14 @@ public class LoginPage {
 	}
 	public void clickOnLogin() {
 		loginLink.click();
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		SeleniumUtils.waitForElement((By.id("user_password")), 2000, driver);
 		userName.click();
 	}
 	public void enterUsername(String un) {
 		userName.sendKeys(un);
 	}
 	public void doLogin(String un,String pwd) {
-		  System.out.println("in dologin");
-		  System.out.println(userName);
-
 		userName.sendKeys(un);
-		  System.out.println(userName);
-
 		password.sendKeys(pwd);
 		loginButton.click();
 	}

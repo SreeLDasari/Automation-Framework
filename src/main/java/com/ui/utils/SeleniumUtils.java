@@ -19,7 +19,6 @@ public class SeleniumUtils {
 		WebDriverWait wait = new WebDriverWait(driver, 3);
 		element = wait.until(
 				ExpectedConditions.visibilityOfElementLocated(locator));
-		System.out.println("Element appeared on the web page");	
 		return element;
 	}
 	
