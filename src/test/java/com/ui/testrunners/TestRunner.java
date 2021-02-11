@@ -10,7 +10,9 @@ import io.cucumber.testng.CucumberOptions;
 		features={"src/test/resources/com/ui/features/"},
 		monochrome=true,
 		glue= {"com.ui.stepdefinitions","com.ui.hooks"},
-		plugin=  {"pretty","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
+		plugin=  {"pretty",
+				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
+				"rerun:target/failedrerun.txt"}
 		)
 public class TestRunner  extends AbstractTestNGCucumberTests{
 	//@Override
