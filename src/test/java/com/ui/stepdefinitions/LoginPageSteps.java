@@ -20,7 +20,8 @@ public class LoginPageSteps {
 	
 	@Given("User is on Home Page")
 	public void user_is_on_home_page() {
-		  BrowserManager.getDriver().get("https://letskodeit.teachable.com/");
+		
+		browsermanager.getDriver().get("https://letskodeit.teachable.com/");
 	}
 
 	@When("User Navigate to Login Page")

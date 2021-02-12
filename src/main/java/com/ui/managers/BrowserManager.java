@@ -28,7 +28,5 @@ public class BrowserManager {
 	public static WebDriver getDriver() {
 		return driver;
 	}
-	
-	
-	
+
 }
