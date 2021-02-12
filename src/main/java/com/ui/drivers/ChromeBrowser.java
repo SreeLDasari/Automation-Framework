@@ -9,7 +9,6 @@ import com.ui.managers.WebDriverManager;
 public class ChromeBrowser extends WebDriverManager{
 	
 	private static final String CHROME_DRIVER_PROPERTY = "webdriver.chrome.driver";
-	//BrowserManager bw=new BrowserManager();
 	public WebDriver driver=null;
 	
 	@Override

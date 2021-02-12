@@ -16,10 +16,7 @@ public class AppHooks {
 
 	@Before
 	public void launchBrowser() {
-		  System.out.println("3");
 		  driver=  browserManager.getBrowserDriver();
-		  System.out.println("4");
-
 	}
 
 	@After

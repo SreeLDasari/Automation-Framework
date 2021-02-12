@@ -14,18 +14,10 @@ public class BrowserManager {
 	public Properties prop;
 	public String browserName;
 	public WebDriver getBrowserDriver() {
-		System.out.println("BM-1");
 		browserFactory=new BrowserFactory();
-		System.out.println("BM-2");
-
 		prop = ConfigReader.getInstance().initProp();
-		System.out.println("prop"+prop);
-
 		browserName = prop.getProperty("browser");
-		System.out.println(browserName);
 		driver=browserFactory.getBrowserName(browserName);
-		System.out.println(browserName);
-
 		
 		return driver;
 	}
@@ -36,7 +28,5 @@ public class BrowserManager {
 	public static WebDriver getDriver() {
 		return driver;
 	}
-	
-	
-	
+
 }
